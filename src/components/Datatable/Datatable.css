@@ -1,0 +1,26 @@
+.data-table {
+	margin: 50px auto;
+	width: 100%;
+}
+
+.data-table thead tr {
+	background-color: rgb(14, 105, 37);
+	font-weight: bold;
+	text-transform: capitalize;
+	color: white;
+	letter-spacing: 3px;
+}
+
+.data-table thead th {
+	border-top: 1px solid rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.data-table tbody > tr:nth-child(even) {
+	background-color: rgba(14, 4, 97, 0.1);
+}
+
+.data-table td {
+	text-align: center;
+	border-bottom: 0.3px solid rgba(0, 0, 0, 0.2);
+}
