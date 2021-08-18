@@ -3,21 +3,23 @@ import React from "react";
 import "./Datatable.css";
 
 type Props<T> = {
+	headingColumns: string[];
 	data: T[];
 };
 
-const Datatable = <T extends Record<string, T>>({ data }: Props<T>) => {
+const Datatable = <T extends Record<string, T>>({
+	headingColumns,
+	data,
+}: Props<T>) => {
 	if (!data.length) {
 		return null;
 	}
-
-	const columns = Object.keys(data[0]).slice(0, 8);
 
 	return (
 		<table className="data-table" cellPadding={10} cellSpacing={0}>
 			<thead>
 				<tr>
-					{columns.map((col) => (
+					{headingColumns.map((col) => (
 						<th key={col}>{col}</th>
 					))}
 				</tr>
@@ -25,7 +27,7 @@ const Datatable = <T extends Record<string, T>>({ data }: Props<T>) => {
 			<tbody>
 				{data.map((row, index) => (
 					<tr key={index}>
-						{columns.map((col) => (
+						{headingColumns.map((col) => (
 							<td>{row[col]}</td>
 						))}
 					</tr>

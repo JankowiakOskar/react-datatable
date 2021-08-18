@@ -1,25 +1,3 @@
 .app {
 	margin: 0 150px;
 }
-
-.search-bar {
-	padding-top: 50px;
-}
-
-.search-bar__search-input {
-	margin-bottom: 30px;
-	max-width: 200px;
-	display: flex;
-	flex-direction: column;
-	font-weight: bold;
-	font-size: 1.2rem;
-}
-
-.search-bar__search-box {
-	padding: 0 20px;
-	font-weight: bold;
-}
-
-.search-bar__search-box:first-of-type {
-	padding: 0;
-}
